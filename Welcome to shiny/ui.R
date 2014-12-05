@@ -4,14 +4,14 @@ library(shiny)
 shinyUI(fluidPage(
   
   # Application title
-  titlePanel("Hello World!"),
+  titlePanel("Hello shiny!"),
   
   # Sidebar with a slider input for the number of bins
   sidebarLayout(
     sidebarPanel(
       sliderInput("bins",
                   "Number of bins:",
-                  min = 5,
+                  min = 1,
                   max = 50,
                   value = 30)
     ),
