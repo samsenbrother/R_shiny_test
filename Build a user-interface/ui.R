@@ -3,7 +3,7 @@
 shinyUI(fluidPage(
   titlePanel("My Shiny App"),
   sidebarLayout(
-    sidebarPanel(),
+    sidebarPanel('zhizhi is sb',p('zhizhi is sb',span('zhizhi is sb ',style="color:blue"),br(),strong("zhizhi is sb"),em('zhizhi is sb',style = "color:blue"))),
     mainPanel(
       p("p creates a paragraph of text. Note: this paragraph is followed by br(), which makes a blank line."),
       p("A new p() command starts a new paragraph. Supply a style attribute to change the format of the entire paragraph", style = "font-family: 'times'; font-si16pt"),
@@ -15,7 +15,8 @@ shinyUI(fluidPage(
       br(),
       p("span does the same thing as div, but it works with",
         span("groups of words", style = "color:blue"),
-        "that appear inside a paragraph.")
+        "that appear inside a paragraph."),
+      img(src='bigorb.png',height=400,width=400)
     )
   )
 ))
