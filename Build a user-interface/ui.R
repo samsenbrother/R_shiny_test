@@ -1,22 +1,25 @@
-# ui.R
-
+#ui.R
 shinyUI(fluidPage(
-  titlePanel("My Shiny App"),
-  sidebarLayout(
-    sidebarPanel('zhizhi is sb',p('zhizhi is sb',span('zhizhi is sb ',style="color:blue"),br(),strong("zhizhi is sb"),em('zhizhi is sb',style = "color:blue"),code('zhizhi is sb')),code("zhizhi is sb",style="color:blue")),
-    mainPanel(
-      p("p creates a paragraph of text. Note: this paragraph is followed by br(), which makes a blank line."),
-      p("A new p() command starts a new paragraph. Supply a style attribute to change the format of the entire paragraph", style = "font-family: 'times'; font-si16pt"),
-      strong("strong() makes bold text."),
-      em("em() creates italicized (i.e, emphasized) text."),
-      br(),
-      code("code displays your text similar to computer code"),
-      div("div creates segments of text with a similar style. This division of text is all blue because I passed the argument 'style = color:blue' to div", style = "color:blue"),
-      br(),
-      p("span does the same thing as div, but it works with",
-        span("groups of words", style = "color:blue"),
-        "that appear inside a paragraph."),
-      img(src='bigorb.png',height=400,width=400)
+  titlePanel(h1("My Shiny App")),
+  sidebarLayout(position = "right",
+      sidebarPanel(
+        h1('Introducing Shiny'),
+        p("shiny is a new package from Rstudio that makes it incredible"),
+        br(),
+        p("For an Introduction and live examples,vist the",strong("Shiny homepage",style="color:blue")),
+        br(),
+        br(),
+        h2("Fetures"),
+        p("*Build useful web applications with only a few lines of code-no JavaScript required"),
+        p("Shiny applications are automatically that ",strong("spreadsheets")," are live,Outputs change instantly as users modify inputs")
+      ),
+      mainPanel(
+        h2("Installation"),
+        p("Shiny is availuble on CRAN,so you can ",br(),"install it in usual way from your R",br(),"console:"),
+        code("install.packages('shiny')"),
+        br(),
+        br(),
+        img(src='bigorb.png',height=150,width=150,"Shiny is a product of Rstudio")
+        )
     )
-  )
 ))
