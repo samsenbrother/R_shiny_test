@@ -8,10 +8,19 @@ shinyUI(navbarPage("卖家竞争力情况",
                                  )
                                ),
                                mainPanel(
-                                 uiOutput('seller_ui')
-                               )
+                                 uiOutput('seller_ui'), #卖家选择
+                                 uiOutput('weidu'), #维度选择
+                                 plotOutput('summary')
+                              )
                              )
-                    )
+                    ),
+                   tabPanel("具体数据",
+                            tableOutput('data')
+                     ),
+                   tabPanel('卖家维度对比',
+                            plotOutput('plot')      
+                            
+                     )
                    
                      
 ))
